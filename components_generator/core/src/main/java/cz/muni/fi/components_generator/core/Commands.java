@@ -57,6 +57,36 @@ public class Commands {
         );
     }
 
+    public static void LinkBundle(
+        String storageUrlBase,
+        String storageUrlBaseInternal,
+        String organizationId,
+        String keyPath,
+        String bundleName,
+        int branching,
+        String fromOrganizationId,
+        String fromBundleId,
+        String fromConnectorId,
+        String fromKeyPath,
+        String outputFolder,
+        boolean createGraph
+    ) {
+        LinkBundle.Execute(
+            storageUrlBase,
+            storageUrlBaseInternal,
+            organizationId,
+            keyPath,
+            bundleName,
+            branching,
+            fromOrganizationId,
+            fromBundleId,
+            fromConnectorId,
+            fromKeyPath,
+            outputFolder,
+            createGraph
+        );
+    }
+
     public static void RegisterOrganisation(
         String storageUrlBase,
         String[] intermediateCertificates,
