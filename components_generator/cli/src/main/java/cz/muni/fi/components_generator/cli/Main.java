@@ -8,6 +8,7 @@ import picocli.CommandLine;
     description = "Main application",
     subcommands = {
         GenerateChain.class,
+        LinkBundle.class,
         PopulateBundle.class,
         RegisterOrganisation.class,
     }
