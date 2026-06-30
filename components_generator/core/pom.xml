@@ -28,6 +28,8 @@
             <groupId>cz.muni.fi.cpm</groupId>
             <artifactId>cpm-core</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/cpm-core-1.0.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.openprovenance.prov</groupId>
@@ -43,6 +45,8 @@
             <groupId>cz.muni.fi.cpm</groupId>
             <artifactId>cpm-template</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/cpm-template-1.0.0.jar</systemPath>
         </dependency>
 
         <dependency>
