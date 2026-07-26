@@ -31,16 +31,16 @@
         <dependency>
             <groupId>cz.muni.fi.cpm</groupId>
             <artifactId>cpm-core</artifactId>
-            <version>1.0.0</version>
+            <version>2.2.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/../core/src/main/resources/cpm-core-1.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/../core/src/main/resources/cpm-core-2.2.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>cz.muni.fi.cpm</groupId>
             <artifactId>cpm-template</artifactId>
-            <version>1.0.0</version>
+            <version>2.2.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/../core/src/main/resources/cpm-template-1.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/../core/src/main/resources/cpm-template-2.2.0.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -56,8 +56,8 @@
                         <goals><goal>shade</goal></goals>
                         <configuration>
                             <extraJars>
-                                <extraJar>${project.basedir}/../core/src/main/resources/cpm-core-1.0.0.jar</extraJar>
-                                <extraJar>${project.basedir}/../core/src/main/resources/cpm-template-1.0.0.jar</extraJar>
+                                <extraJar>${project.basedir}/../core/src/main/resources/cpm-core-2.2.0.jar</extraJar>
+                                <extraJar>${project.basedir}/../core/src/main/resources/cpm-template-2.2.0.jar</extraJar>
                             </extraJars>
                             <filters>
                                 <filter>

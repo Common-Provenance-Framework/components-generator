@@ -141,7 +141,7 @@ class ComponentGenerator {
         mainActivity.setUsed(backwardConnectors.stream().map(bc -> new MainActivityUsed(bc.getId())).toList());
         mainActivity.setReferencedMetaBundleId(pF.newQualifiedName(MetaUrl, bundleName + "_meta", MetaPrefix));
 
-        var document = templateProvMapper.map(ti);
+        var document = templateProvMapper.toProvDocument(ti);
 
         // return document;
         return new CpmDocument(document, pF, cPF, new CpmOrderedFactory());
@@ -157,7 +157,7 @@ class ComponentGenerator {
             .findFirst()
             .get();
 
-        var spec_fc = new ForwardConnector();
+        var spec_fc = new SpecForwardConnector();
         spec_fc.setId(pF.newQualifiedName(CpmNamespaceUrl, connectorIdLocal + "-spec", CpmPrefix));
         spec_fc.setReferencedBundleId(referencedBundleId);
         spec_fc.setReferencedMetaBundleId(metaId);
@@ -167,7 +167,7 @@ class ComponentGenerator {
 
         var document = cpmDocument.toDocument();
         var bundle = ((Bundle) document.getStatementOrBundle().getFirst());
-        bundle.getStatement().addAll(templateProvMapper.map(spec_fc));
+        bundle.getStatement().addAll(templateProvMapper.toStatementsStream(spec_fc).toList());
         var originalLocalPartPrefix = bundleId.getLocalPart().split("-v")[0];
         bundle.setId(pF.newQualifiedName(bundleId.getNamespaceURI(), originalLocalPartPrefix + "-v" + System.currentTimeMillis(), bundleId.getPrefix()));
 
